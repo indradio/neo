@@ -1,0 +1,19 @@
+CRITICAL - 2020-07-15 11:30:29 --> Undefined property: App\Controllers\Users::$cartModel
+#0 C:\xampp\htdocs\warehouse\app\Controllers\Users.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 47, Array)
+#1 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->register()
+#2 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\warehouse\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-15 11:55:39 --> Cannot use empty array elements in arrays
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-07-15 11:56:47 --> Undefined variable: data
+#0 C:\xampp\htdocs\warehouse\app\Controllers\Users.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->register()
+#2 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\warehouse\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
