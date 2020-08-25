@@ -15,9 +15,10 @@ namespace App\Controllers;
  */
 
  //load Guzzle Library
-require_once APPPATH.'ThirdParty\Guzzle\autoload.php';
+require_once APPPATH.'ThirdParty/Guzzle/autoload.php';
 
 use CodeIgniter\Controller;
+use App\Models\LogsModel;
 
 class BaseController extends Controller
 {
@@ -31,7 +32,9 @@ class BaseController extends Controller
 	 */
 	
 	protected $helpers = [];
+	protected $db;
 	protected $client;
+	protected $logsModel;
 	 
 	/**
 	 * Constructor.
@@ -44,9 +47,11 @@ class BaseController extends Controller
 
 		//--------------------------------------------------------------------
 		// Preload any models, libraries, etc, here.
+		$this->logsModel = new LogsModel();
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		$this->db = \Config\Database::connect();
 		$this->client = new \GuzzleHttp\Client();
 	}
 

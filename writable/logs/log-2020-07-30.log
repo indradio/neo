@@ -1,0 +1,39 @@
+CRITICAL - 2020-07-30 08:47:52 --> Undefined variable: output
+#0 C:\xampp\htdocs\neo\app\Controllers\Parts.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 107, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Parts->partFav()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Parts))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-30 08:54:17 --> unlink(assets/img/faces/02691.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(assets/i...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(104): unlink('assets/img/face...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-07-30 11:23:01 --> Undefined variable: part_price_disc
+#0 C:\xampp\htdocs\neo\app\Views\quote\index.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 61, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('quote/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Quote.php(55): view('quote/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Quote->order('ORD2007-002')
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Quote))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-30 13:13:24 --> Undefined property: stdClass::$quotation_expired
+#0 C:\xampp\htdocs\neo\app\Views\quote\index.php(106): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 106, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('quote/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Quote.php(55): view('quote/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Quote->order('ORD2007-002')
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Quote))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}

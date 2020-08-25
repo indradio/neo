@@ -9,7 +9,7 @@ class CartModel extends Model
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
-    protected $allowedFields = ['id','name','description','category','order_qty','uom','user_id','created_at','updated_at','ai'];
+    protected $allowedFields = ['id','name','description','category','order_qty','uom','sloc','user_id','created_at','updated_at','ai'];
 
     public function getAll(){
         return $this->findAll();

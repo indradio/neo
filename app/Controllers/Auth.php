@@ -23,6 +23,7 @@ class Auth extends BaseController
 	{
         $db = \Config\Database::connect();
         $builder = $db->table('company');
+        $builder = $builder->where(['id !=' => 'WTQ']);
         $data = [
             'company' => $builder->get() 
         ];
@@ -42,9 +43,20 @@ class Auth extends BaseController
 		$user = $this->usersModel->where(['email'=>$email])->first();
 		if (!empty($user)) {
             if (password_verify($password, $user['password'])) {
-                $this->setUserSession($user);
-                session()->setFlashdata('message', 'welcome');
-				return redirect()->to('/dashboard');
+                if ($user['is_active']==1){
+                    $this->logsModel->insert([
+                        'user_id' => $user['id'],
+                        'code' => '100',
+                        'description' => 'Login successfully'
+                    ]);
+                    $this->setUserSession($user);
+                    session()->setFlashdata('message', 'welcome');
+
+                    return redirect()->to('/dashboard');
+                }else{
+                    session()->setFlashdata('message', 'welcome');
+                    return redirect()->to('login');
+                }
             } else {
                 // $this->session->set_flashdata('message', '<div class="alert alert-rose">
                 // <strong>Login Gagal</strong>
@@ -71,6 +83,7 @@ class Auth extends BaseController
             'phone' => $user['phone'],
             'companyId' => $user['company_id'],
             'group' => $user['group'],
+            'photo' => $user['photo'],
             'roleId' => $user['role_id'],
             'isLoggedIn' => true
         ];

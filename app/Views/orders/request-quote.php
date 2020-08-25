@@ -5,7 +5,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <form id="RangeValidation" class="form-horizontal" action="<?= base_url('order/upload'); ?>" method="post" enctype="multipart/form-data">
+                <form id="RangeValidation" class="form-horizontal" action="<?= base_url('order/submit/quote'); ?>" method="post" enctype="multipart/form-data">
                     <input class="form-control" type="hidden" name="id" value="<?= $orders->id;?>" readonly/>
                     <div class="card ">
                         <div class="card-header ">
@@ -15,9 +15,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Quote ID</label>
                                 <div class="col-sm-7">
-                                    <div class="form-group input-group">
-                                        <input class="form-control" type="text" name="quote_id" placeholder="<?= date('Y/m/').'QUO/XXX'; ?>" required/>
-                                        <span class="input-group-addon"></span>
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="quoteId" placeholder="<?= date('Y/m/').'QUO/XXX'; ?>" required/>
                                     </div>
                                 </div>
                                 <label class="col-sm-3 label-on-right">
@@ -27,9 +26,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Create Date a Quote</label>
                                 <div class="col-sm-7">
-                                    <div class="form-group input-group">
-                                        <input class="form-control datepicker" type="text" name="create_date" placeholder="<?= date('d/m/Y'); ?>" required/>
-                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input class="form-control datepicker" type="text" name="quoteDate" placeholder="<?= date('d-m-Y'); ?>" required/>
                                     </div>
                                 </div>
                                 <label class="col-sm-3 label-on-right">
@@ -39,9 +37,8 @@
                             <div class="row">
                                 <label class="col-sm-2 col-form-label">Expired Date a Quote</label>
                                 <div class="col-sm-7">
-                                    <div class="form-group input-group">
-                                        <input class="form-control datepicker" type="text" name="expired_date" placeholder="<?= date('d/m/Y'); ?>" required/>
-                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                    <div class="form-group">
+                                        <input class="form-control datepicker" type="text" name="quoteExpired" placeholder="<?= date('d-m-Y'); ?>" required/>
                                     </div>
                                 </div>
                                 <label class="col-sm-3 label-on-right">
@@ -52,12 +49,12 @@
                                 <label class="col-sm-2 col-form-label">UPLOAD A QUOTE</label>
                                 <div class="col-sm-7">
                                     <div class="form-group custom-file">
-                                        <input type="file" class="form-control" id="quoteFile" name="quoteFile"/>
+                                        <input type="file" class="form-control" id="quoteFile" name="quoteFile" required/>
                                         <!-- <label class="btn btn-outline btn-success custom-file-label" for="quoteFile">Choose file</label> -->
                                     </div>
                                 </div>
                                 <label class="col-sm-3 label-on-right">
-                                    <code>*Tidak Wajib</code>
+                                    <code>*Wajib</code>
                                 </label>
                             </div>
                         </div>
@@ -102,21 +99,6 @@
 
 <?php $this->section('javascript');?>
     <script type="text/javascript">
-
-    $('.datepicker').datetimepicker({
-        format: 'DD/MM/YYYY',
-        icons: {
-            time: "fa fa-clock-o",
-            date: "fa fa-calendar",
-            up: "fa fa-chevron-up",
-            down: "fa fa-chevron-down",
-            previous: 'fa fa-chevron-left',
-            next: 'fa fa-chevron-right',
-            today: 'fa fa-screenshot',
-            clear: 'fa fa-trash',
-            close: 'fa fa-remove'
-        }
-    });
 
     $(document).ready(function() {
         setFormValidation('#RangeValidation');

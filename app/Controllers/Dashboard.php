@@ -38,15 +38,45 @@ class Dashboard extends BaseController
 		// );
 		// $body = $response->getBody();
 				
-		$data = [
-			'menu' => 'Dashboard',
-			'submenu' => '',
-			'newOrders' => $this->ordersModel->where(['status' => '1'])->get(),
-			'countNewOrders' => $this->ordersModel->where(['status' => '1'])->countAllResults(),
-		];
 		if (session()->get('roleId')==991 or session()->get('roleId')==1){
+			$builder = $this->db->table('parts_favorite');
+			$partsFav = $builder->where('user_id',session()->get('id'))->countAllResults();
+
+			$this->ordersModel->where(['user_id' => session()->get('id')]);
+			$onShip = $this->ordersModel->where(['status' => '4'])->countAllResults();
+
+			$this->ordersModel->where(['user_id' => session()->get('id')]);
+			$onPrepare = $this->ordersModel->where(['status' => '4'])->countAllResults();
+
+			$this->ordersModel->where(['user_id' => session()->get('id')]);
+			$newOrders = $this->ordersModel->where(['status' => '1'])->countAllResults();
+
+			$this->ordersModel->where(['user_id' => session()->get('id')]);
+			$activeQuote = $this->ordersModel->where(['status' => '2'])->countAllResults();
+
+			$builder = $this->db->table('keyword');
+			$keyword = $builder->where('id',rand(1,10))->get()->getRow();
+
+			$data = [
+				'menu' => 'Dashboard',
+				'submenu' => '',
+				'partsFav' => $partsFav,
+				'onShip' => $onShip,
+				'onPrepare' => $onPrepare,
+				'newOrders' => $newOrders,
+				'activeQuote' => $activeQuote,
+				'keyword' => $keyword->keyword
+			];
 			return view('dashboard/index', $data);
 		}else{
+			$data = [
+				'menu' => 'Dashboard',
+				'submenu' => '',
+				'newOrders' => $this->ordersModel->where(['status' => '1'])->get(),
+				'poReceive' => $this->ordersModel->where(['status' => '2'])->get(),
+				'shipping' => $this->ordersModel->where(['status' => '3'])->get(),
+				'countNewOrders' => $this->ordersModel->where(['status' => '1'])->countAllResults(),
+			];
 			return view('dashboard/index-sales', $data);
 		}
     }
