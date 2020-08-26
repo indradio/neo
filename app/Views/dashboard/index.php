@@ -3,115 +3,135 @@
 <?php $this->section('content');?>
 <div class="content">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
+    <div class="row">
+            <div class="col-md-12">
                 <div class="card card-stats">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="icon-big text-center icon-warning">
-                                    <i class="nc-icon nc-light-3 text-success"></i>
-                                </div>
+                    <div class="card-body">
+                        <nav class="navbar navbar-expand-lg" data-spy="affix" data-offset-top="197">
+                            <div class="input-group input-group-lg rounded">
+                                <input type="text" class="form-control border-primary" style="height: unset;border-width: medium; border-right: none;" id="mySearch" name="mySearch" placeholder="<?= $keyword; ?>" autofocus>
+                                <span class="input-group-addon border-primary" style=" border-width: medium; border-left: none;"><i class="fa fa-search"></i></span>
                             </div>
-                            <div class="col-7">
-                                <div class="numbers">
-                                    <p class="card-category">Rekomendasi</p>
-                                    <h4 class="card-title">10 Item</h4>
-                                </div>
-                            </div>
-                        </div>
+                        </nav>
                     </div>
-                    <div class="card-footer ">
-                        <hr>
+                    <div class="card-footer">
+                        <!-- <hr> -->
                         <div class="stats">
-                            <i class="fa fa-calendar-o"></i> Last day
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="icon-big text-center icon-warning">
-                                    <i class="nc-icon nc-tag-content text-primary"></i>
-                                </div>
-                            </div>
-                            <div class="col-7">
-                                <div class="numbers">
-                                    <p class="card-category">Kupon</p>
-                                    <h4 class="card-title">3 Kupon</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-clock-o"></i> In the last hour
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="icon-big text-center icon-warning">
-                                    <i class="nc-icon nc-favourite-28 text-danger"></i>
-                                </div>
-                            </div>
-                            <div class="col-7">
-                                <div class="numbers">
-                                    <p class="card-category">Favorit</p>
-                                    <h4 class="card-title">3 Item</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-refresh"></i> Update now
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card card-stats">
-                    <div class="card-body ">
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="icon-big text-center icon-warning">
-                                    <i class="nc-icon nc-paper-2 text-warning"></i>
-                                </div>
-                            </div>
-                            <div class="col-7">
-                                <div class="numbers">
-                                    <p class="card-category">Penawaran Aktif</p>
-                                    <h4 class="card-title">2 Penawaran</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer ">
-                        <hr>
-                        <div class="stats">
-                            <i class="fa fa-refresh"></i> Update Now
+                            <i class="fa fa-shopping-cart ml-3"></i> Buruan sikat, sebelum kehabisan part.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-3 col-sm-6" id="myStats1" style="display:block;">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-cart-simple text-danger"></i>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="numbers">
+                                    <p class="card-category">Checkout</p>
+                                    <h4 class="card-title">Cari Part</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-search"></i> Pasti ada, cari aja dulu.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6" id="myStats2" style="display:block;">
+                <div class="card card-stats">
+                    <div class="card-body ">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-single-copy-04 text-success"></i>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="numbers">
+                                    <p class="card-category">Quotation</p>
+                                    <h4 class="card-title">Penawaran</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer ">
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-file"></i> Harga spesial khusus untuk anda.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6" id="myStats3" style="display:block;">
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-paper-2 text-warning"></i>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="numbers">
+                                    <p class="card-category">Payment</p>
+                                    <h4 class="card-title">Purchase Order</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <hr>
+                        <div class="stats">
+                            <i class="fa fa-money"></i> PO dulu, baru bayar.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6" id="myStats4" style="display:block;">
+                <div class="card card-stats">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="icon-big text-center icon-warning">
+                                    <i class="nc-icon nc-delivery-fast text-primary"></i>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="numbers">
+                                    <p class="card-category">Delivery</p>
+                                    <h4 class="card-title">Pengiriman</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <hr>
+                        <div class="stats">
+                        <i class="fa fa-map"></i> Pengiriman tepat waktu.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-1">
                 <div class="card data-tables">
                     <!-- <div class="card-header ">
                         <h4 class="card-title">Table Big Boy</h4>
                         <p class="card-category">A table for content management</p>
-                    </div> -->
+                    </div>
                     <div class="card-body table-no-bordered table-hover dataTable dtr-inline table-full-width">
                         <div class="toolbar">
                             <div class="col-md-12 mr-auto ml-auto">
@@ -121,9 +141,9 @@
                                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
                                     </div>
                                 </form>
-                            </div>
+                            </div> -->
                             <!--        Here you can write extra buttons/actions for the toolbar              -->
-                        </div>
+                        <!-- </div> -->
                         <div class="fresh-datatables">
                             <table id="dt" class="table table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
                                 <thead>
@@ -165,11 +185,11 @@
                                 <label class="col-sm-3 col-form-label">QTY</label>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" type="number" name="order_qty" id="order_qty" value="1" number="true" min="1" />
+                                        <input class="form-control" type="number" name="order_qty" id="order_qty" value="1" number="true" min="1" required/>
+                                        <p class="card-text"><small class="text-muted" id="qty"></small></p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="card-text"><small class="text-muted" id="qty"></small></p>
                         </div>
                     </div>
                 </div>
@@ -216,21 +236,63 @@
                 {
                     render: function (data, type, row, meta) { 
                         var crncy = row.price;
+                        var high_crncy = row.high_price;
 		
                         var	reverse = crncy.toString().split('').reverse().join(''),
                             price 	= reverse.match(/\d{1,3}/g);
                             price	= price.join('.').split('').reverse().join('');
-                        var html =
-                        '<a href="<?= base_url(); ?>/parts/item/'+row.id+'">'+
-                        '  <img src="<?= base_url(); ?>/assets/img/materials/NO-PART.jpg" class="card-img-top" />'+
-                        '  <div class="card-body">'+
-                        '    <h5 class="card-title">'+row.description+'</h5>'+
-                        '    <div class="card-text">'+row.name+'</div>'+
-                        '    <div class="card-text">Rp '+price+'</div>'+
-                        '    <a href="#" class="btn btn-outline btn-wd btn-dribbble mt-2"><span class="btn-label">Favorit <i class="fa fa-heart"></i></span></a>'+
-                        '    <a href="#" class="btn btn-outline btn-wd btn-primary" data-toggle="modal" data-target="#addCart" data-id="'+row.id+'" data-name="'+row.name+'" data-description="'+row.description+'" data-qty="Tersedia '+parseInt(row.qty)+' '+row.uom+'" data-img="<?= base_url(); ?>/assets/img/materials/'+row.name+'.jpg"><span class="btn-label">Tambah Ke <i class="fa fa-shopping-cart"></i></span></a>'+
-                        '  </div>'+
-                        '</a>';
+
+                        var	reverse = high_crncy.toString().split('').reverse().join(''),
+                            high_price 	= reverse.match(/\d{1,3}/g);
+                            high_price	= high_price.join('.').split('').reverse().join('');
+
+
+                        if (row.discount>0){ 
+                            var html =
+                            '<a href="<?= base_url(); ?>/parts/item/'+row.id+'">'+
+                            '  <img src="<?= base_url(); ?>/assets/img/parts/'+row.photo+'" class="card-img-top" />'+
+                            '  <div class="card-body mb-5">'+
+                            '    <h5 class="card-title">'+row.description+'</h5>'+
+                            '    <div class="card-text text-muted"><small>'+row.name+'</small></div>'+
+                            '    <div class="card-text text-danger d-inline-block"><strike>Rp '+high_price+'</strike></div>'+
+                            '    <a class="badge badge-success text-light">-'+row.discount+'%</a>'+
+                            '    <h5 class="card-text text-dark">Rp '+price+'</h5>'+
+                            '  </div>'+
+                            '  <div class="card-footer" style="position: absolute; left:8%; bottom:0;">'+
+                            '    <a href="#" class="btn btn-outline btn-primary d-inline-block" data-toggle="modal" data-target="#addCart" data-id="'+row.id+'" data-name="'+row.name+'" data-description="'+row.description+'" data-qty="Tersedia '+parseInt(row.qty)+' '+row.uom+'" data-img="<?= base_url(); ?>/assets/img/parts/'+row.photo+'"><span class="btn-label">Tambah Ke <i class="fa fa-shopping-cart"></i></span></a>'+
+                            '    <a href="<?= base_url('/parts/add_favorite/'); ?>/'+row.id+'" class="btn btn-outline btn-dribbble ml-1" style="position: absolute;"><span class="btn-label"><i class="fa fa-heart"></i></span></a>'+
+                            '  </div>'+
+                            '</a>';
+                        }else if (row.price==0){ 
+                            var html =
+                            '<a href="<?= base_url(); ?>/parts/item/'+row.id+'">'+
+                            '  <img src="<?= base_url(); ?>/assets/img/parts/'+row.photo+'" class="card-img-top" />'+
+                            '  <div class="card-body mb-5">'+
+                            '    <h5 class="card-title">'+row.description+'</h5>'+
+                            '    <div class="card-text text-muted"><small>'+row.name+'</small></div>'+
+                            '    <h5 class="card-text text-dark">Rp - </h5>'+
+                            '    <a class="badge badge-primary text-light">Hubungi Sales</a></br>'+
+                            '  </div>'+
+                            '  <div class="card-footer" style="position:absolute; left:8%; bottom:0;">'+
+                            '    <a href="#" class="btn btn-outline btn-primary d-inline-block" data-toggle="modal" data-target="#addCart" data-id="'+row.id+'" data-name="'+row.name+'" data-description="'+row.description+'" data-qty="Tersedia '+parseInt(row.qty)+' '+row.uom+'" data-img="<?= base_url(); ?>/assets/img/parts/'+row.photo+'"><span class="btn-label">Tambah Ke <i class="fa fa-shopping-cart"></i></span></a>'+
+                            '    <a href="<?= base_url('/parts/add_favorite/'); ?>/'+row.id+'" class="btn btn-outline btn-dribbble ml-1" style="position: absolute;"><span class="btn-label"><i class="fa fa-heart"></i></span></a>'+
+                            '  </div>'+
+                            '</a>';
+                        }else{
+                            var html =
+                            '<a href="<?= base_url(); ?>/parts/item/'+row.id+'">'+
+                            '  <img src="<?= base_url(); ?>/assets/img/parts/'+row.photo+'" class="card-img-top" />'+
+                            '  <div class="card-body mb-5">'+
+                            '    <h5 class="card-title">'+row.description+'</h5>'+
+                            '    <div class="card-text text-muted"><small>'+row.name+'</small></div>'+
+                            '    <h5 class="card-text text-dark">Rp '+price+'</h5>'+
+                            '  </div>'+
+                            '  <div class="card-footer" style="position: absolute; left:8%; bottom:0;">'+
+                            '    <a href="#" class="btn btn-outline btn-primary d-inline-block" data-toggle="modal" data-target="#addCart" data-id="'+row.id+'" data-name="'+row.name+'" data-description="'+row.description+'" data-qty="Tersedia '+parseInt(row.qty)+' '+row.uom+'" data-img="<?= base_url(); ?>/assets/img/parts/'+row.photo+'"><span class="btn-label">Tambah Ke <i class="fa fa-shopping-cart"></i></span></a>'+
+                            '    <a href="<?= base_url('/parts/add_favorite/'); ?>/'+row.id+'" class="btn btn-outline btn-dribbble ml-1" style="position: absolute;"><span class="btn-label"><i class="fa fa-heart"></i></span></a>'+
+                            '  </div>'+
+                            '</a>';
+                        }
                         return html;
                     }
                 },
@@ -245,7 +307,7 @@
 
         table.on('draw', function(data){
             $('#dt tbody').addClass('row');
-            $('#dt tbody tr').addClass('col-lg-2 col-md-3 col-sm-12');
+            $('#dt tbody tr').addClass('col-lg-2 col-md-3 col-sm-6 mt-0 mb-0');
         });
 
         $('#mySearch').on( 'keyup', function () {
@@ -292,21 +354,22 @@
         })
     });
 
-    function setFormValidation(id) {
-        $(id).validate({
-            highlight: function(element) {
-                $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-                $(element).closest('.form-check').removeClass('has-success').addClass('has-error');
-            },
-            success: function(element) {
-                $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-                $(element).closest('.form-check').removeClass('has-error').addClass('has-success');
-            },
-            errorPlacement: function(error, element) {
-                $(element).closest('.form-group').append(error).addClass('has-error');
-            },
-        });
-    }
+    $( "#mySearch" ).keyup(function() {
+        var x = document.getElementById("mySearch").value;
+        if (x === '') {
+            document.getElementById("myStats1").style.display = "block";
+            document.getElementById("myStats2").style.display = "block";
+            document.getElementById("myStats3").style.display = "block";
+            document.getElementById("myStats4").style.display = "block";
+        } else {
+            document.getElementById("myStats1").style.display = "none";
+            document.getElementById("myStats2").style.display = "none";
+            document.getElementById("myStats3").style.display = "none";
+            document.getElementById("myStats4").style.display = "none";
+        }
+        document.body.scrollTop = 60;
+        document.documentElement.scrollTop = 60;
+    });
 
     $(document).ready(function() {
         setFormValidation('#TypeValidation');

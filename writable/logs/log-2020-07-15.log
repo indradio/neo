@@ -17,3 +17,383 @@ CRITICAL - 2020-07-15 11:56:47 --> Undefined variable: data
 #4 C:\xampp\htdocs\warehouse\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\warehouse\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2020-07-15 13:17:39 --> Access denied for user '****'@'%' to database 'cpwinteq_neo'
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Model.php(489): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\neo\app\Controllers\Auth.php(42): CodeIgniter\Model->first()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Auth->submit()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2020-07-15 13:17:39 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\neo\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\neo\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Auth), true)
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(299): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(172): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-07-15 13:18:19 --> Access denied for user '****'@'%' to database 'cpwinteq_neo'
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1845): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Model.php(489): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\neo\app\Controllers\Auth.php(42): CodeIgniter\Model->first()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Auth->submit()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2020-07-15 13:18:19 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\neo\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\neo\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\Auth), true)
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(299): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Debug\Exceptions.php(172): CodeIgniter\Debug\Exceptions->render(Object(mysqli_sql_exception), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(mysqli_sql_exception))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-07-15 15:41:58 --> Undefined property: stdClass::$company_name
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(151): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 151, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:44:18 --> Undefined property: stdClass::$company_name
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:44:19 --> Undefined property: stdClass::$company_name
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:44:37 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:45:21 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#2 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-07-15 15:45:40 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:45:41 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:46:03 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$name
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:46:04 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$name
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:46:22 --> Trying to get property 'id' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:46:48 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:48:02 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:48:04 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:49:08 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:49:09 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:49:22 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:51:18 --> Trying to get property 'city' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:52:06 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(148): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 148, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:53:20 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#2 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-07-15 15:53:21 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#2 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-07-15 15:53:31 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 15:54:20 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#2 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-07-15 15:54:34 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include()
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#2 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2020-07-15 16:00:29 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:02:11 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:02:21 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:02:22 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:03:53 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(155): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 155, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:07:49 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:07:56 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\neo\app\Views\users\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/index', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(22): view('users/index', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->index()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-15 16:20:11 --> syntax error, unexpected ')'
+#0 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/verificat...', Array, true)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(63): view('users/verificat...', Array)
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->verification('dnia001')
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}

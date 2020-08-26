@@ -16,6 +16,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
                                         <th>Amount</th>
                                         <th class="disabled-sorting text-right">Status</th>
                                     </tr>
@@ -24,6 +26,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Quote Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
                                         <th>Amount</th>
                                         <th class="disabled-sorting text-right">Status</th>
                                     </tr>
@@ -38,6 +42,8 @@
                                     <tr>
                                         <td><?= $row->id; ?></td>
                                         <td><?= date('d M Y', strtotime($row->date)); ?></td>
+                                        <td><?= $row->user_name; ?></td>
+                                        <td><?= $row->user_company_id; ?></td>
                                         <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
                                         <td class="text-right">
                                             <a href="<?= base_url('order/request/resume/'.$row->id); ?>" class="btn btn-outline btn-wd btn-info"><?= $status->name; ?></a>

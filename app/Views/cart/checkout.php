@@ -5,19 +5,37 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    ⚠️<strong>PEMBERITAHUAN!</strong>⚠️
+                    </br>
+                    </br>Semangat Pagi <?= session()->get('name'); ?>,
+                    </br>NEO adalah Layanan Portal B2B (Business to Business) yang memudahkan anda mencari komponen (part) untuk peralatan industri maupun manufaktur. 
+                    </br>Kami akan segera menghubungi anda melalui kontak telepon maupun email dengan penawaran dan harga terbaik setelah anda KLIK tombol <strong>"Request Quote"</strong>.
+                    </br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card strpied-tabled-with-hover">
                     <div class="card-header ">
                         <h4 class="card-title">Checkout</h4>
-                        <p class="card-category">Here is a subtitle for this table</p>
+                        <p class="card-category">Penawaran terbaik akan kami siapkan hanya untuk anda</p>
                         <div class="row mt-5 mb-3">
                             <div class="col-md-1">
                                 <p class="card-text text-right">Ship To :</p>
                             </div>
                             <div class="col-md-3">
-                                <h5 class="card-text">PT CUSTOMER ADALAH RAJA</h5>
+                            <?php 
+                                $db = \Config\Database::connect();
+                                $builder = $db->table('company');
+                                $company = $builder->where(['id' => session()->get('companyId')])->get()->getRow();
+                            ?>
+                                <h5 class="card-text"><?= $company->name; ?></h5>
                                 <p class="card-text">
-                                    Jl Raya Alamat PT Customer </br>
-                                    Kecamatan - Kota </br>
+                                    <?= $company->address; ?> </br>
+                                </p>
+                                <p class="card-text">
                                     Attn: <?= session()->get('name'); ?> </br>
                                     Email: <?= session()->get('email'); ?> </br>
                                     Phone: <?= session()->get('phone'); ?> </br>
@@ -25,7 +43,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card-body table-full-width table-responsive">
+                    <div class="card-body table-responsive">
                         <table class="table table-hover table-striped">
                             <thead>
                                 <th>#</th>
@@ -68,12 +86,7 @@
                                     <th> Subtotal (IDR)</th>
                                     <th><?= number_format($total, 0, '.', ','); ?></th>
                                 </tr>
-                                <tr>
-                                    <th colspan="4"></th>
-                                    <th> Discount (0%)</th>
-                                    <th>-</th>
-                                </tr>
-                                <tr>
+                                <!-- <tr>
                                     <th colspan="4"></th>
                                     <th> VAT (10%)</th>
                                     <th><?= number_format($vat, 0, '.', ','); ?></th>
@@ -82,13 +95,14 @@
                                     <th colspan="4"></th>
                                     <th> Total (IDR)</th>
                                     <th><?= number_format($grandTotal, 0, '.', ','); ?></th>
-                                </tr>
+                                </tr> -->
                             </tfoot>
                         </table>
                     </div>
                     <div class="card-footer">
                         <div class="row">
                             <div class="col-md-8"></div>
+                            <a href="<?= base_url('cart'); ?>" class="btn btn-link">Kembali</a>
                             <div class="col-md-2 mr-2">
                                 <a href="<?= base_url('cart/order'); ?>" class="btn btn-round btn-outline btn-wd btn-primary form-control btn-glowing">Request a Quote</a>
                             </div>

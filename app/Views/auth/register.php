@@ -57,7 +57,8 @@
         </nav>
         <!-- End Navbar -->
         <!--   you can change the color of the filter page using: data-color="blue | azure | green | orange | red | purple" -->
-        <div class="full-page register-page section-image" data-color="blue" data-image="../../assets/img/bg5.jpg">
+        <div class="full-page register-page section-image" data-color="" data-image="../../assets/img/login.jpg">
+        <div class="flash-data" data-flashdata="<?= session()->getFlashdata('message'); ?>"></div> 
             <div class="content">
                 <div class="container">
                     <div class="card card-register card-plain text-center">
@@ -65,8 +66,8 @@
                             <div class="row  justify-content-center">
                                 <div class="col-md-8">
                                     <div class="header-text">
-                                        <h2 class="card-title">Light Bootstrap Dashboard PRO</h2>
-                                        <h4 class="card-subtitle">Register for free and experience the dashboard today</h4>
+                                        <h2 class="card-title">DAFTAR PELANGGAN BARU</h2>
+                                        <h4 class="card-subtitle">Dapatkan kemudahan mencari komponen (part) sesuai kebutuhan anda</h4>
                                         <hr />
                                     </div>
                                 </div>
@@ -78,34 +79,34 @@
                                     <div class="media">
                                         <div class="media-left">
                                             <div class="icon">
-                                                <i class="nc-icon nc-circle-09"></i>
+                                                <i class="nc-icon nc-bag"></i>
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <h4>Free Account</h4>
-                                            <p>Here you can write a feature description for your dashboard, let the users know what is the value that you give them.</p>
+                                            <h4>B2B Portal</h4>
+                                            <p>NEO merupakan B2B (Business to Business) Portal yang menyediakan komponen (part) peralatan industri maupun manufaktur.</p>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
                                             <div class="icon">
-                                                <i class="nc-icon nc-preferences-circle-rotate"></i>
+                                                <i class="nc-icon nc-app"></i>
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <h4>Awesome Performances</h4>
-                                            <p>Here you can write a feature description for your dashboard, let the users know what is the value that you give them.</p>
+                                            <h4>+5,000 Komponen</h4>
+                                            <p>Terdapat lebih dari 5,000 komponen dari berbagai jenis dan ukuran yang sangat lengkap sesuai kebutuhan anda.</p>
                                         </div>
                                     </div>
                                     <div class="media">
                                         <div class="media-left">
                                             <div class="icon">
-                                                <i class="nc-icon nc-planet"></i>
+                                                <i class="nc-icon nc-delivery-fast"></i>
                                             </div>
                                         </div>
                                         <div class="media-body">
-                                            <h4>Global Support</h4>
-                                            <p>Here you can write a feature description for your dashboard, let the users know what is the value that you give them.</p>
+                                            <h4>Pengiriman Cepat</h4>
+                                            <p>Kami akan mengirimkan pesanan anda dengan cepat dan aman sampai ke lokasi anda.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -126,7 +127,7 @@
                                                     <select name="company_id" id="company_id" class="selectpicker show-tick" data-title="Pilih Perusahaan" data-style="btn-primary btn-fill" data-menu-style="dropdown-blue" data-live-search="true" required>
                                                         <?php
                                                         foreach ($company->getResult() as $row) 
-                                                        { echo '<option value="'. $row->initial.'">'. $row->name.'</option>'; } 
+                                                        { echo '<option value="'. $row->id.'">'. $row->name.'</option>'; } 
                                                         ?>
                                                     </select>
                                                 </div>
@@ -138,7 +139,7 @@
                                                 </div>
                                             </div>
                                             <div class="footer text-center">
-                                                <button type="submit" class="btn btn-fill btn-neutral btn-wd">Daftar</button>
+                                                <button type="submit" class="btn btn-fill btn-primary btn-wd">Daftar</button>
                                             </div>
                                         </div>
                                     </form>
@@ -155,22 +156,17 @@
                     <ul class="footer-menu">
                         <li>
                             <a href="#">
-                                Home
+                                FAQs
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Company
+                                Syarat dan Ketentuan
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Portfolio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Blog
+                                Pusat Bantuan
                             </a>
                         </li>
                     </ul>
@@ -179,7 +175,7 @@
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                        <a href="https://www.winteq-astra.co.id">Winteq Digitalization Team</a>, made with <i class="nc-icon nc-favourite-28"></i> for a better future.
                     </p>
                 </nav>
             </div>
@@ -319,6 +315,8 @@
 <script src="<?= base_url(); ?>/assets/js/plugins/fullcalendar.min.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="<?= base_url(); ?>/assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+<!--  Notifications & Sweet Alert Plugin    -->
+<script src="<?= base_url(); ?>/assets/js/notify-sweetalert2.js" type="text/javascript"></script>
 <!-- Light Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo.js"></script>
 <script>

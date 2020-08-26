@@ -1,0 +1,193 @@
+CRITICAL - 2020-07-28 09:21:09 --> Undefined index: company
+#0 C:\xampp\htdocs\neo\app\Views\users\profile.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 44, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/profile', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(77): view('users/profile', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->profile()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 09:26:06 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\neo\app\Views\users\profile.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/profile', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(77): view('users/profile', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->profile()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 09:27:24 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\neo\app\Views\users\profile.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/profile', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(77): view('users/profile', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->profile()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 10:03:28 --> unlink(assets/img/parts/1595905361_c93ee614e4c01c40e001.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(assets/i...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(92): unlink('assets/img/part...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-07-28 10:04:31 --> unlink(assets/img/faces/1595905436_f4c5f2bdbd808e01a8eb.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(assets/i...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(92): unlink('assets/img/face...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-07-28 10:04:42 --> unlink(assets/img/faces/1595905436_f4c5f2bdbd808e01a8eb.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(assets/i...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(92): unlink('assets/img/face...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-07-28 10:13:53 --> Argument 2 passed to CodeIgniter\Session\Session::push() must be of the type array, string given, called in C:\xampp\htdocs\neo\app\Controllers\Users.php on line 99
+#0 C:\xampp\htdocs\neo\app\Controllers\Users.php(99): CodeIgniter\Session\Session->push('photo', '1595906033_b227...')
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 10:15:18 --> unlink(assets/img/faces/1595905995_89342752a18a919221bc.jpg): No such file or directory
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(assets/i...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\app\Controllers\Users.php(92): unlink('assets/img/face...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->change_photo()
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2020-07-28 13:50:42 --> Undefined variable: output
+#0 C:\xampp\htdocs\neo\app\Controllers\Parts.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 107, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Parts->partFav()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Parts))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 13:50:48 --> Undefined variable: output
+#0 C:\xampp\htdocs\neo\app\Controllers\Parts.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 107, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Parts->partFav()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Parts))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 13:51:09 --> Undefined variable: output
+#0 C:\xampp\htdocs\neo\app\Controllers\Parts.php(107): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 107, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Parts->partFav()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Parts))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 14:07:35 --> Undefined variable: selisih
+#0 C:\xampp\htdocs\neo\app\Views\orders\request-resume.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('orders/request-...', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Order.php(73): view('orders/request-...', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->request('resume', 'ORD2007-002')
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 14:57:20 --> Undefined variable: vat
+#0 C:\xampp\htdocs\neo\app\Views\cart\checkout.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 80, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('cart/checkout', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Cart.php(115): view('cart/checkout', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Cart->checkout()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 15:28:21 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\neo\app\Views\users\profile.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/profile', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(78): view('users/profile', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->profile()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 15:30:13 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\neo\app\Views\users\profile.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 51, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\View\View.php(246): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Common.php(1087): CodeIgniter\View\View->render('users/profile', Array, true)
+#3 C:\xampp\htdocs\neo\app\Controllers\Users.php(78): view('users/profile', Array)
+#4 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Users->profile()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2020-07-28 15:30:57 --> Division by zero
+#0 C:\xampp\htdocs\neo\app\Controllers\Cart.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 167, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Cart->order()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 16:01:11 --> Undefined variable: part_price_sell
+#0 C:\xampp\htdocs\neo\app\Controllers\Order.php(91): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 91, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->update_price()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 16:01:36 --> Undefined variable: part_price_sell
+#0 C:\xampp\htdocs\neo\app\Controllers\Order.php(92): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->update_price()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 16:01:47 --> Division by zero
+#0 C:\xampp\htdocs\neo\app\Controllers\Order.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Division by zer...', 'C:\\xampp\\htdocs...', 92, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->update_price()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 16:08:47 --> Undefined property: stdClass::$price
+#0 C:\xampp\htdocs\neo\app\Controllers\Order.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->update_price()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2020-07-28 16:09:20 --> Undefined variable: grandtotal
+#0 C:\xampp\htdocs\neo\app\Controllers\Order.php(139): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 139, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Order->update_price()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Order))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}

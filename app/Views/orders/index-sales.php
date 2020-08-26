@@ -16,6 +16,8 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
                                         <th>Amount</th>
                                         <th class="disabled-sorting text-right">Status</th>
                                     </tr>
@@ -23,7 +25,9 @@
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
-                                        <th>Quote Date</th>
+                                        <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
                                         <th>Amount</th>
                                         <th class="disabled-sorting text-right">Status</th>
                                     </tr>
@@ -38,9 +42,23 @@
                                     <tr>
                                         <td><?= $row->id; ?></td>
                                         <td><?= date('d M Y', strtotime($row->date)); ?></td>
+                                        <td><?= $row->user_name; ?></td>
+                                        <td><?= $row->user_company_id; ?></td>
                                         <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
                                         <td class="text-right">
-                                            <a href="#" class="btn btn-outline btn-wd btn-info"><?= $status->name; ?></a>
+                                            <?php 
+                                            if ($row->status==0){
+                                                echo '<a href="#" class="btn btn-outline btn-wd btn-success mt-1">EXPIRED</a>';
+                                            }elseif ($row->status==1) {
+                                                echo '<a href="'.base_url('order/request/resume/'.$row->id).'" class="btn btn-outline btn-wd btn-info mt-1">'. $status->name.'</a>';
+                                            }elseif ($row->status==2) {
+                                                echo '<a href="#" class="btn btn-outline btn-wd btn-success mt-1">WAITING PO</a>';
+                                            }elseif ($row->status==3) {
+                                                echo '<a href="#" data-toggle="modal" data-target="#modalProcess" data-order_id="'. $row->id .'" data-header="#'. $row->po_id.'" class="btn btn-outline btn-wd btn-reddit mt-1">DELIVERY</a>';
+                                            }elseif ($row->status==9) {
+                                                echo '<a href="'.base_url('quote/order/'.$row->id).'" class="btn btn-outline btn-wd btn-primary mt-1">DELIVERED</a>';
+                                            }
+                                            ?>
                                         </td>
                                     </tr>
                                         <?php } ?>
@@ -120,6 +138,47 @@
   </div>
 </div>
 
+<div class="modal fade" id="modalProcess" tabindex="-1" role="dialog" aria-labelledby="modalProcessTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalProcessTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form id="TypeValidation" class="form-horizontal" action="<?= base_url('order/submit/dn'); ?>" method="post">
+      <?= csrf_field(); ?>
+        <div class="modal-body">
+        <input class="form-control" type="hidden" name="id" id="id" />
+            <div class="card-body">
+                <div class="row">
+                    <label class="col-sm-3 col-form-label">Delvery ID / DN</label>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="deliveryId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="col-sm-3 col-form-label">Delvery at</label>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <input class="form-control datepicker" type="text" name="deliveryDate" placeholder="<?= date('d-m-Y'); ?>" required/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer justify-content-right">
+            <button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-wd btn-primary">Delivered</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 <?php $this->endSection('');?>
 
 <?php $this->section('javascript');?>
@@ -131,6 +190,7 @@
                     [10, 25, 50, -1],
                     [10, 25, 50, "All"]
                 ],
+                order: [[ 0, "desc" ]],
                 responsive: true,
                 language: {
                     search: "_INPUT_",
@@ -168,6 +228,16 @@
                 modal.find('.modal-body input[name="id"]').val(id)
                 document.getElementById("delCartTitle").innerHTML = header;
             })  
+
+            $('#modalProcess').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var id = button.data('order_id')
+            var header = button.data('header')
+            var modal = $(this)
+            modal.find('.modal-body input[name="id"]').val(id)
+            document.getElementById("modalProcessTitle").innerHTML = header;
+            })  
+
         });
 
         function setFormValidation(id) {

@@ -58,8 +58,9 @@
             </div>
         </nav>
         <!-- End Navbar -->
-        <div class="full-page  section-image" data-color="azure" data-image="<?= base_url(); ?>/assets/img/full-screen-image-2.jpg" ;>
+        <div class="full-page  section-image" data-color="azure" data-image="<?= base_url(); ?>/assets/img/login-blur.jpg" ;>
             <!--   you can change the color of the filter page using: data-color="blue | purple | green | orange | red | rose " -->
+            <div class="flash-data" data-flashdata="<?= session()->getFlashdata('message'); ?>"></div> 
             <div class="content">
                 <div class="container">
                     <div class="col-md-5 col-sm-6 ml-auto mr-auto">
@@ -87,7 +88,7 @@
                                             <input type="password" placeholder="Password" id="pswd" name="pswd" class="form-control">
                                         </div>
                                         <div class="form-group">
-                                            <a href="<?= base_url(); ?>">
+                                            <a href="<?= base_url('auth/register'); ?>">
                                             <!-- <label> -->
                                                     <small>Belum punya akun? Daftar</small>
                                                 <!-- </label> -->
@@ -122,35 +123,30 @@
         </div>
         <footer class="footer">
             <div class="container">
-                <nav>
-                    <!-- <ul class="footer-menu">
+            <nav>
+                    <ul class="footer-menu">
                         <li>
                             <a href="#">
-                                Home
+                                FAQs
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Company
+                                Syarat dan Ketentuan
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Portfolio
+                                Pusat Bantuan
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                Blog
-                            </a>
-                        </li>
-                    </ul> -->
-                    <p class="copyright text-center float-center">
+                    </ul>
+                    <p class="copyright text-center">
                         ©
                         <script>
                             document.write(new Date().getFullYear())
                         </script>
-                        <a href="https://www.winteq-astra.com">Winteq Digitalization Team</a>, made with <i class="nc-icon nc-favourite-28"></i> for a better future.
+                        <a href="https://www.winteq-astra.co.id">Winteq Digitalization Team</a>, made with <i class="nc-icon nc-favourite-28"></i> for a better future.
                     </p>
                 </nav>
             </div>
@@ -290,6 +286,8 @@
 <script src="<?= base_url(); ?>/assets/js/plugins/fullcalendar.min.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="<?= base_url(); ?>/assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+<!--  Notifications & Sweet Alert Plugin    -->
+<script src="<?= base_url(); ?>/assets/js/notify-sweetalert2.js" type="text/javascript"></script>
 <!-- Light Dashboard DEMO methods, don't include it in your project! -->
 <script src="../../assets/js/demo.js"></script>
 <script>

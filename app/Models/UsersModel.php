@@ -21,6 +21,7 @@ class UsersModel extends Model
             'photo',
             'status',
             'password',
+            'verify_by',
             'created_at',
             'updated_at',
         ];
