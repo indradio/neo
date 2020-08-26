@@ -15,15 +15,16 @@ Tip 2: you can also add an image using data-image tag
         </div>
         <div class="user">
             <div class="photo">
-                <img src="<?= base_url(); ?>/assets/img/faces/face-0.jpg" />
+                <img src="<?= base_url(); ?>/assets/img/faces/<?= session()->get('photo'); ?>" />
             </div>
             <div class="info ">
-                <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                <!-- <a data-toggle="collapse" href="#collapseExample" class="collapsed"> -->
+                <a class="collapsed">
                     <span><?= session()->get('name'); ?>
-                        <b class="caret"></b>
+                        <!-- <b class="caret"></b> -->
                     </span>
                 </a>
-                <div class="collapse" id="collapseExample">
+                <!-- <div class="collapse" id="collapseExample">
                     <ul class="nav">
                         <li>
                             <a class="profile-dropdown" href="#pablo">
@@ -44,7 +45,7 @@ Tip 2: you can also add an image using data-image tag
                             </a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
         <ul class="nav">
@@ -64,7 +65,7 @@ Tip 2: you can also add an image using data-image tag
                 <?php if ($m->menu=='Dashboard') : ?>
                     <a class="nav-link" href="<?= base_url('dashboard'); ?>">
                 <?php else : ?>
-                    <a class="nav-link" data-toggle="collapse" href="#<?= $m->id; ?>">
+                    <a class="nav-link <?= ($menu==$m->menu) ? '' : 'collapsed';?>" data-toggle="collapse" href="#<?= $m->id; ?>">
                 <?php endif; ?>
                     <i class="nc-icon <?= $m->icon; ?>"></i>
                     <p>
@@ -73,6 +74,7 @@ Tip 2: you can also add an image using data-image tag
                     </p>
                 </a>
                 <div class="collapse <?= ($menu==$m->menu) ? 'show' : '';?>" id="<?= $m->id; ?>">
+                    <ul class="nav">
                     <?php
                     $query = "SELECT * FROM `user_sub_menu`
                                 WHERE `menu_id` = {$m->id}
@@ -82,15 +84,14 @@ Tip 2: you can also add an image using data-image tag
 
                     $listsubmenu = $db->query($query)->getResult();
                     foreach ($listsubmenu as $sm) : ?>
-                    <ul class="nav">
                         <li class="nav-item <?= ($submenu==$sm->title) ? 'active' : '';?>">
                             <a class="nav-link" href="<?= base_url($sm->url); ?>">
                                 <span class="sidebar-mini"><?= substr($sm->title, 0, 1); ?></span>
                                 <span class="sidebar-normal"><?= $sm->title; ?></span>
                             </a>
                         </li>
-                    </ul>
                     <?php endforeach; ?>
+                    </ul>
                 </div>
             </li>
             <?php endforeach; ?>

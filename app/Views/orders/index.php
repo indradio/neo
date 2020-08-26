@@ -16,7 +16,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Order Date</th>
-                                        <th>Amount</th>
+                                        <th>Amount (IDR)</th>
                                         <th class="disabled-sorting text-right">Status</th>
                                     </tr>
                                 </thead>
@@ -40,7 +40,15 @@
                                         <td><?= date('d M Y', strtotime($row->date)); ?></td>
                                         <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
                                         <td class="text-right">
-                                            <a href="#" class="btn btn-outline btn-wd btn-info"><?= $status->name; ?></a>
+                                            <?php 
+                                            if ($row->status==1){
+                                                echo '<a href="#" class="btn btn-outline btn-wd btn-success">REQUEST QUOTE</a>';
+                                            }elseif ($row->status==2) {
+                                                echo '<a href="'.base_url('quote/order/'.$row->id).'" class="btn btn-outline btn-wd btn-info">WAITING PO</a>';
+                                            }elseif ($row->status==3) {
+                                                echo '<a href="'.base_url('quote/order/'.$row->id).'" class="btn btn-outline btn-wd btn-primary">WAITING PO</a>';
+                                            }
+                                            ?>
                                         </td>
                                     </tr>
                                         <?php } ?>
@@ -131,6 +139,7 @@
                     [10, 25, 50, -1],
                     [10, 25, 50, "All"]
                 ],
+                order: [[ 0, "desc" ]],
                 responsive: true,
                 language: {
                     search: "_INPUT_",

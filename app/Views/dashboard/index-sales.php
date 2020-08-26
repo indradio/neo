@@ -3,7 +3,7 @@
 <?php $this->section('content');?>
 <div class="content">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" hidden>
             <div class="col-lg-3 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-body ">
@@ -132,7 +132,7 @@
                                 <tfoot>
                                     <tr>
                                         <th>#</th>
-                                        <th>Quote Date</th>
+                                        <th>Order Date</th>
                                         <th>Name</th>
                                         <th>Company</th>
                                         <th>Amount</th>
@@ -149,8 +149,8 @@
                                     <tr>
                                         <td><?= $row->id; ?></td>
                                         <td><?= date('d M Y', strtotime($row->date)); ?></td>
-                                        <td><?= $row->user_id; ?></td>
-                                        <td>Company</td>
+                                        <td><?= $row->user_name; ?></td>
+                                        <td><?= $row->user_company_id; ?></td>
                                         <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
                                         <td class="text-right">
                                             <a href="<?= base_url('order/request/resume/'.$row->id); ?>" class="btn btn-outline btn-wd btn-info"><?= $status->name; ?></a>
@@ -164,40 +164,168 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card data-tables">
+                    <div class="card-header ">
+                        <h4 class="card-title">Waiting Purchase Order</h4>
+                        <p class="card-category">A table for content management</p>
+                        <br />
+                    </div>
+                    <div class="card-body table-striped table-no-bordered table-hover dataTable dtr-inline table-full-width">
+                        <div class="toolbar">
+                            <!--        Here you can write extra buttons/actions for the toolbar              -->
+                        </div>
+                        <div class="fresh-datatables">
+                            <table id="datatables2" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Amount</th>
+                                        <th class="disabled-sorting text-right">Status</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Amount</th>
+                                        <th class="disabled-sorting text-right">Status</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <?php 
+                                        foreach ($poReceive->getResult() as $row) { 
+                                    ?>
+                                    <tr>
+                                        <td><?= $row->id; ?></td>
+                                        <td><?= date('d M Y', strtotime($row->date)); ?></td>
+                                        <td><?= $row->user_name; ?></td>
+                                        <td><?= $row->user_company_id; ?></td>
+                                        <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
+                                        <td class="text-right">
+                                        <a href="#" data-toggle="modal" data-target="#popNext" data-order_id="<?= $row->id; ?>" class="btn btn-outline btn-wd btn-success">PO RECEIVING</a>
+                                        </td>
+                                    </tr>
+                                        <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card data-tables">
+                    <div class="card-header ">
+                        <h4 class="card-title">Ready to Delivery</h4>
+                        <p class="card-category">A table for content management</p>
+                        <br />
+                    </div>
+                    <div class="card-body table-striped table-no-bordered table-hover dataTable dtr-inline table-full-width">
+                        <div class="toolbar">
+                            <!--        Here you can write extra buttons/actions for the toolbar              -->
+                        </div>
+                        <div class="fresh-datatables">
+                            <table id="datatables3" class="table table-striped table-no-bordered table-hover" cellspacing="0" width="100%" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Amount</th>
+                                        <th class="disabled-sorting text-right">Status</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Order Date</th>
+                                        <th>Name</th>
+                                        <th>Company</th>
+                                        <th>Amount</th>
+                                        <th class="disabled-sorting text-right">Status</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <?php 
+                                        foreach ($shipping->getResult() as $row) { 
+                                    ?>
+                                    <tr>
+                                        <td><?= $row->id; ?></td>
+                                        <td><?= date('d M Y', strtotime($row->date)); ?></td>
+                                        <td><?= $row->user_name; ?></td>
+                                        <td><?= $row->user_company_id; ?></td>
+                                        <td><?= number_format($row->grandtotal, 0, '.', ','); ?></td>
+                                        <td class="text-right">
+                                            <a href="#" data-toggle="modal" data-target="#modalProcess" data-order_id="<?= $row->id; ?>" data-header="#<?= $row->po_id; ?>" class="btn btn-outline btn-wd btn-reddit">DELIVERY</a>
+                                        </td>
+                                    </tr>
+                                        <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="addCart" tabindex="-1" role="dialog" aria-labelledby="addCartTitle" aria-hidden="true">
+<div class="modal fade" id="popNext" tabindex="-1" role="dialog" aria-labelledby="popNextTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title"> Proses selanjutnya?</h5>
+      </div>
+      <form id="TypeValidation" class="form-horizontal" action="<?= base_url('order/requote'); ?>" method="post">
+      <?= csrf_field(); ?>
+        <div class="modal-body">
+            <input class="form-control" type="hidden" name="order_id" id="order_id" />
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button type="submit" class="btn btn-wd btn-warning">REQUOTE</button>
+            <a href="<?= base_url('order/receiving/'.$row->id);?>" class="btn btn-wd btn-success ml-2">PO RECEIVE</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalProcess" tabindex="-1" role="dialog" aria-labelledby="modalProcessTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addCartTitle">Modal title</h5>
+        <h5 class="modal-title" id="modalProcessTitle"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form id="TypeValidation" class="form-horizontal" action="<?= base_url('cart/add'); ?>" method="post">
+      <form id="TypeValidation" class="form-horizontal" action="<?= base_url('order/submit/dn'); ?>" method="post">
       <?= csrf_field(); ?>
         <div class="modal-body">
         <input class="form-control" type="hidden" name="id" id="id" />
-            <div class="card border-0" style="max-width: 100%;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                    <img id="img" src="" class="card-img" />
+            <div class="card-body">
+                <div class="row">
+                    <label class="col-sm-3 col-form-label">Delvery ID / DN</label>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="deliveryId" />
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title" id="partName"></h5>
-                            <p class="card-text"></p>
-                            <div class="row">
-                                <label class="col-sm-3 col-form-label">QTY</label>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control" type="number" name="order_qty" id="order_qty" value="1" number="true" min="1" />
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="card-text"><small class="text-muted" id="qty"></small></p>
+                </div>
+                <div class="row">
+                    <label class="col-sm-3 col-form-label">Delvery at</label>
+                    <div class="col-sm-9">
+                        <div class="form-group">
+                            <input class="form-control datepicker" type="text" name="deliveryDate" placeholder="<?= date('d-m-Y'); ?>" required/>
                         </div>
                     </div>
                 </div>
@@ -205,7 +333,7 @@
         </div>
         <div class="modal-footer justify-content-right">
             <button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
-            <button type="submit" class="btn btn-wd btn-primary">Tambahkan</button>
+            <button type="submit" class="btn btn-wd btn-primary">Delivered</button>
         </div>
       </form>
     </div>
@@ -218,6 +346,34 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#datatables').DataTable({
+            "pagingType": "full_numbers",
+            "lengthMenu": [
+                [10, 25, 50, -1],
+                [10, 25, 50, "All"]
+            ],
+            responsive: true,
+            language: {
+                search: "_INPUT_",
+                searchPlaceholder: "Search records",
+            }
+
+        });
+
+        $('#datatables2').DataTable({
+            "pagingType": "full_numbers",
+            "lengthMenu": [
+                [10, 25, 50, -1],
+                [10, 25, 50, "All"]
+            ],
+            responsive: true,
+            language: {
+                search: "_INPUT_",
+                searchPlaceholder: "Search records",
+            }
+
+        });
+
+        $('#datatables3').DataTable({
             "pagingType": "full_numbers",
             "lengthMenu": [
                 [10, 25, 50, -1],
@@ -247,6 +403,15 @@
             document.getElementById("partName").innerHTML = description;
             document.getElementById("qty").innerHTML = qty;
         })
+
+        $('#modalProcess').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget)
+            var id = button.data('order_id')
+            var header = button.data('header')
+            var modal = $(this)
+            modal.find('.modal-body input[name="id"]').val(id)
+            document.getElementById("modalProcessTitle").innerHTML = header;
+            })  
     });
 
     function setFormValidation(id) {

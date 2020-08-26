@@ -1,0 +1,8 @@
+CRITICAL - 2020-08-18 16:34:55 --> Undefined variable: partlist
+#0 C:\xampp\htdocs\neo\app\Controllers\Cart.php(164): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 164, Array)
+#1 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(914): App\Controllers\Cart->order()
+#2 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Cart))
+#3 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\neo\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\neo\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\xampp\\htdocs...')
+#6 {main}
