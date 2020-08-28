@@ -56,8 +56,8 @@ class Users extends BaseController
 							'Authorization' => 'Bearer zrIchFm6ewt2f18SbXRcNzSVXJrQBEsD1zrbjtxuZCyi6JfOAcRIQkrL6wEmChqVWwl0De3yxAhJAuKS',
 						],
 						'json' => [
-							// 'phone' => '6281324945151',
-							'phone' => '6281311196988',
+							'phone' => '6281324945151',
+							// 'phone' => '6281311196988',
 							'message' => "*PENDAFTARAN USER BARU*" . 
 							"\r\n \r\nID : *" . $id . "*" .
 							"\r\nNama : *" . $this->request->getPost('name') . "*" .

@@ -89,10 +89,12 @@
                                     </div>
                                     <div class="card-footer">
                                     <div class="row">
-                                            <label class="col-sm-2 col-form-label"></label>
+                                            <label class="col-sm-2 col-form-label"><a href="<?= base_url('/parts'); ?>" class="btn btn-link">Kembali</a></label>
                                             <div class="col-sm-7">
                                                 <button type="submit" class="btn btn-outline btn-wd btn-primary">Update</button>
-                                                <a href="<?= base_url('/parts'); ?>" class="btn btn-link">Kembali</a>
+                                                <?php if ($part['base_price'] != $part['price']){ ?>
+                                                    <a href="#" class="btn btn-outline btn-wd btn-danger" data-toggle="modal" data-target="#resetPart" data-id="<?= $part['id']; ?>" data-base="<?= $part['base_price']; ?>" data-header="Harga jual akan menggunakan harga dasar?">Reset</a>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
@@ -105,6 +107,29 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade" id="resetPart" tabindex="-1" role="dialog" aria-labelledby="resetPartTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header justify-content-center">
+        <h5 class="modal-title" id="resetPartTitle"></h5>
+        </button>
+      </div>
+      <form id="TypeValidation" class="form-horizontal" action="<?= base_url('parts/reset'); ?>" method="post">
+      <?= csrf_field(); ?>
+        <div class="modal-body">
+        <input class="form-control" type="hidden" name="id" id="id" />
+        <input class="form-control" type="hidden" name="base_price" id="base_price" />
+        <input class="form-control text-center" type="text" name="crncy_price" id="crncy_price" readonly/>
+        </div>
+        <div class="modal-footer justify-content-center">
+            <button type="submit" class="btn btn-wd btn-primary">YA!</button>
+            <button type="button" class="btn btn-wd btn-danger ml-1" data-dismiss="modal">TIDAK</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 <?php $this->endSection('');?>
 
@@ -152,6 +177,23 @@
 
         document.getElementById("discount").value = discount;
         
+    });
+
+    $('#resetPart').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget)
+        var id = button.data('id')
+        var base_price = button.data('base')
+        var header = button.data('header')
+
+        var	reverse = base_price.toString().split('').reverse().join(''),
+            price 	= reverse.match(/\d{1,3}/g);
+            crncy_price	= price.join('.').split('').reverse().join('');
+
+        var modal = $(this)
+        modal.find('.modal-body input[name="id"]').val(id)
+        modal.find('.modal-body input[name="base_price"]').val(base_price)
+        modal.find('.modal-body input[name="crncy_price"]').val('Rp ' + crncy_price)
+        document.getElementById("resetPartTitle").innerHTML = header;
     });
 </script>
 <?php $this->endSection('');?>

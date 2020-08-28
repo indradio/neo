@@ -234,6 +234,21 @@ class Parts extends BaseController
 		return redirect()->to('/parts/id/'.$this->request->getPost('id'));
 	}
 
+	public function reset()
+{
+		$builder = $this->db->table('parts_updated');
+		$builder->where('id',$this->request->getPost('id'));
+		$builder->delete();
+
+		$this->partsModel->set('high_price', $this->request->getPost('base_price'));
+		$this->partsModel->set('discount', 0);
+		$this->partsModel->set('price', $this->request->getPost('base_price'));
+		$this->partsModel->where('id',$this->request->getPost('id'));
+		$this->partsModel->update();
+
+		return redirect()->to('/parts/id/'.$this->request->getPost('id'));
+    }
+
 	public function change()
 	{
 
