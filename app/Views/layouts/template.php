@@ -292,7 +292,12 @@
                                         <i class="fa fa-whatsapp fa-2x"> </i>
                                     </a>
                                     <ul class="dropdown-menu">
-                                        <li class="header-title"> Sidebar Style</li>
+                                        <li class="header-title text-center">Butuh Bantuan?</li>
+                                        <li class="button-container">
+                                            <a href="https://wa.me/6281324945151?text=Tanya%20tentang%20NEO?%20" target="_blank" class="btn btn-info btn-block btn-fill">Milfan Agung</a>
+                                            <a href="https://wa.me/628111880024?text=Tanya%20tentang%20NEO?%20" target="_blank" class="btn btn-dribbble btn-block btn-fill">Evy Rachmawati</a>
+                                        </li>
+                                        <!-- <li class="header-title"> Sidebar Style</li>
                                         <li class="adjustments-line">
                                             <a href="javascript:void(0)" class="switch-trigger">
                                                 <p>Background Image</p>
@@ -382,7 +387,7 @@
                                         <li class="button-container">
                                             <button id="twitter" class="btn btn-social btn-twitter btn-round sharrre"><i class="fa fa-twitter"></i> · 256</button>
                                             <button id="facebook" class="btn btn-social btn-facebook btn-round sharrre"><i class="fa fa-facebook-square"> · 426</i></button>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
